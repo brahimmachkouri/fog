@@ -9,17 +9,14 @@ downloadfiles() {
     do
         filename=$(basename -- "$url")
         baseurl=$(dirname -- "$url")
-        curl --silent -kOL $url >>$workingdir/error_logs/fog_error_${version}.log 2>&1
+        curl --silent -kOL $url
     done
     echo "Done"
-    errorStat $?
-    copypath="./"
     dots "Copying binaries to destination paths"
-    cp -vf ${copypath}bzImage ${webdirdest}/service/ipxe/ >>$workingdir/error_logs/fog_error_${version}.log 2>&1 || errorStat $?
-    cp -vf ${copypath}bzImage32 ${webdirdest}/service/ipxe/ >>$workingdir/error_logs/fog_error_${version}.log 2>&1 || errorStat $?
-    cp -vf ${copypath}init.xz ${webdirdest}/service/ipxe/ >>$workingdir/error_logs/fog_error_${version}.log 2>&1 || errorStat $?
-    cp -vf ${copypath}init_32.xz ${webdirdest}/service/ipxe/ >>$workingdir/error_logs/fog_error_${version}.log 2>&1 || errorStat $?
-    cp -vf ${copypath}FOGService.msi ${copypath}SmartInstaller.exe ${webdirdest}/client/ >>$workingdir/error_logs/fog_error_${version}.log 2>&1
-    errorStat $?
+    cp -vf bzImage ${webdirdest}/service/ipxe/ 
+    cp -vf bzImage32 ${webdirdest}/service/ipxe/ 
+    cp -vf init.xz ${webdirdest}/service/ipxe/ 
+    cp -vf init_32.xz ${webdirdest}/service/ipxe/ 
+    cp -vf FOGService.msi ${copypath}SmartInstaller.exe ${webdirdest}/client/ 
     cd $cwd
 }
