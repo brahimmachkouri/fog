@@ -4,7 +4,7 @@ downloadfiles() {
     cwd=$(pwd)
     cd ../tmp/
 
-    urls=( "https://github.com/brahimmachkouri/fog/blob/master/binaries/bzImage" "https://github.com/brahimmachkouri/fog/blob/master/binaries/bzImage32" "https://github.com/brahimmachkouri/fog/blob/master/binaries/init.xz" "https://github.com/brahimmachkouri/fog/blob/master/binaries/init_32.xz" "https://github.com/brahimmachkouri/fog/blob/master/binaries/SmartInstaller" "https://github.com/brahimmachkouri/fog/blob/master/binaries/FOGService.msi")
+    urls=( "https://github.com/brahimmachkouri/fog/blob/master/binaries/bzImage" "https://github.com/brahimmachkouri/fog/blob/master/binaries/bzImage32" "https://github.com/brahimmachkouri/fog/blob/master/binaries/init.xz" "https://github.com/brahimmachkouri/fog/blob/master/binaries/init_32.xz" "https://github.com/brahimmachkouri/fog/blob/master/binaries/SmartInstaller.exe" "https://github.com/brahimmachkouri/fog/blob/master/binaries/FOGService.msi")
     for url in "${urls[@]}"
     do
         filename=$(basename -- "$url")
