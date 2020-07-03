@@ -12,8 +12,6 @@ downloadfiles() {
         curl --silent -kOL $url >>$workingdir/error_logs/fog_error_${version}.log 2>&1
     done
     echo "Done"
-    #dots "Extracting the binaries archive"
-    #unzip -o binaries.zip >>$workingdir/error_logs/fog_error_${version}.log 2>&1
     errorStat $?
     copypath="./"
     dots "Copying binaries to destination paths"
