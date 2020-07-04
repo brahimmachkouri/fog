@@ -10,7 +10,6 @@ downloadfiles() {
         baseurl=$(dirname -- "$url")
         curl --silent -kOL $url >>$workingdir/error_logs/fog_error_${version}.log 2>&1
     done
-    echo "Done"
     errorStat $?
     copypath="./"
     dots "Copying binaries to destination paths"
