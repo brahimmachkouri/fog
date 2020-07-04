@@ -1,5 +1,5 @@
 # FogProject Savior
-FogProject installation script when fogproject.org (https://github.com/FOGProject/fogproject) is down
+FogProject installation script when https://fogproject.org is down
 
 ```
 git clone https://github.com/brahimmachkouri/fog.git
